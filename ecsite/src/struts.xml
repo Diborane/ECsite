@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation/DTD Struts Configration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!-- Strutsの詳細設定 -->
+<struts>
+
+	<constant name="struts.devMode" value="true"/>
+
+	<package name="ecsite.action" extends="struts-default">
+
+		<action name="LogoutAction" class="ecsite.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<action name="GoHomeAction" class="ecsite.action.GoHomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<action name="HomeAction" class="ecsite.action.HomeAction" method="execute">
+			<result name="success">buyItem.jsp</result>
+			<result name="login">login.jsp</result>
+		</action>
+
+		<action name="LoginAction" class="ecsite.action.LoginAction" method="execute">
+			<result name="success">buyItem.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="UserCreateAction" class="ecsite.action.UserCreateAction" method="execute">
+			<result name="success">userCreate.jsp</result>
+		</action>
+
+		<action name="UserCreateConfirmAction" class="ecsite.action.UserCreateConfirmAction" method="execute">
+			<result name="success">userCreateConfirm.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+		<action name="UserCreateCompleteAction" class="ecsite.action.UserCreateCompleteAction" method="execute">
+			<result name="success">userCreateComplete.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+		<action name="BuyItemAction" class="ecsite.action.BuyItemAction" method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+			<result name="error">buyItem.jsp</result>
+		</action>
+
+		<action name="BuyItemCompleteAction" class="ecsite.action.BuyItemCompleteAction" method="execute">
+			<result name="success">buyItemComplete.jsp</result>
+		</action>
+
+		<action name="MyPageAction" class="ecsite.action.MyPageAction" method="execute">
+			<result name="success">myPage.jsp</result>
+		</action>
+
+
+	</package>
+</struts>
